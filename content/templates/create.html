@@ -1,0 +1,22 @@
+{% extends 'theme.html' %}
+{% block content %}
+{% load static %}
+
+<form action="" class="mb-5 tm-comment-form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2 class="tm-color-primary tm-post-title mb-4">Create a New Post</h2>
+    <div class="mb-4">
+        {{form.title}}
+    </div>
+    <div class="mb-4">
+        {{form.image}}
+    </div>
+    <div class="mb-4">
+        {{form.content}}
+    </div>
+    <div class="text-right">
+        <button class="tm-btn tm-btn-primary tm-btn-small" type="submit">Save</button>                        
+    </div>                                
+</form>
+
+{% endblock %}
